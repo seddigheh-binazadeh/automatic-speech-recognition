@@ -31,13 +31,13 @@ For Regularization we apply the dropout = 0.1 in transformer layer.
 Our model has 127 M parameters. 
 
 | Maxpool2d       | Embedding layer                    | Transformer Layer     |
-| --------------- | -----------------------------------|-----------------------|
+| :-------------: | :---------------------------------:|:---------------------:|
 | kernel_size = 2 | num_embedding = size of dictionary | num_encoder = 6       |
 |  stride = 2     |  Dim_embedding = 1024 (d_model)    | num_decoder = 6       |
 |        -        |                -                   | Attention heads = 4   |
 |        -        |                -                   | d_model  = 1024       |
 |        -        |                -                   | dim_FeedForward = 4096|
 
-
+! [Model_block](https://github.com/seddigheh-binazadeh/automatic-speech-recognition/blob/main/imgs/model block.png)
 
 
