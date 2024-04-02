@@ -21,8 +21,18 @@ In this project we use Mel-spectrogram representation instead of raw audio.  Nex
 The processed clips were converted into Mel spectrogram representations, which visually illustrate a signal's frequency makeup over time using the Mel scale, a linear scale for human hearing. The Mel spectrogram helps our models understand sound as humans do. This is achieved by passing the raw audio through filter banks to obtain the Mel spectrogram, resulting in a shape of 128 x input dimension for each sample, indicating 128 filter banks used and input dimension time steps per clip. Then we applied specAugment (A Simple Data Augmentation Method for Automatic Speech Recognition [6]) that is available in pytorch and consists of warping the features, masking blocks of frequency channels, and masking blocks of time steps. 
 Figures 1 and 2 show a raw audio clip and its corresponding Mel frequency representation after augmentation. Our models learn features from this representation, and their architectures are discussed next.
 
-![image]()
+![image](https://github.com/seddigheh-binazadeh/automatic-speech-recognition/blob/main/imgs/raw_audio_SpecAug.png)
 
+# Model
+
+Our model has two important parts. First, there is the feature extractor part, for which we utilize ResNet18 without the last 4 layers. We also add a MaxPool2D layer with a kernel size and stride of 2 for the end layer, and then permute and reshape the output size so that we obtain a feature vector of size [batch_size] x [seq_length] x [dimensions * channels].  Since the number of channels depends on the number of filters in the last convolutional layers, and the dimension depends on the size of the kernel and the stride of the convolutional layers and the freq_bins of the Mel spectrogram the product of dimension and channels is a static variable and is equal to 1024 in our design, and we refer these parameters as d _model. We set d_model in the Embedding Layers and also in the transformer layer to be equal to 1024 too .but the seq_length varies for each batch. 
+To ensure precision in our model, we incorporate positional encoding as well as src_mask and trg_mask into the transformer model.
+For Regularization we apply the dropout = 0.1 in transformer layer.
+Our model has 127 M parameters. 
+
+| Maxpool2d       | Embedding layer                    | Transformer Layer |
+| --------------- | -----------------------------------|-------------------|
+| kernel_size = 2 | num_embedding = size of dictionary | num_encoder = 6   |
 
 
 
