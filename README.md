@@ -38,6 +38,26 @@ Our model has 127 M parameters.
 |        -        |                -                   | d_model  = 1024       |
 |        -        |                -                   | dim_FeedForward = 4096|
 
-! [Model_block](https://github.com/seddigheh-binazadeh/automatic-speech-recognition/blob/main/imgs/model block.png)
+![image](https://github.com/seddigheh-binazadeh/automatic-speech-recognition/blob/main/imgs/model%20block.png)
+
+# Experiment 
+ we trained the model  with SGD optimizer by lr = (0.5 for 24 epoch and reduce lr to 0.05 for last 10 epoch), momentum = 0.9 .
+Figure below represent the loss curves in training progress:
+
+![image](https://github.com/seddigheh-binazadeh/automatic-speech-recognition/blob/main/imgs/loss_.png)
+
+# Refrences 
+1.	Deng, L., Li, J., Huang, J.T., Yao, K., Yu, D., Seide, F., Seltzer, M., Zweig, G., He, X., Williams, J. and Gong, Y., 2013, May. Recent advances in deep learning for speech research at Microsoft. In 2013 IEEE international conference on acoustics, speech and signal processing (pp. 8604-8608). IEEE.
+
+2.	Passricha, V. and Aggarwal, R. (2020) A Hybrid of Deep CNN and Bidirectional LSTM for Automatic Speech Recognition. Journal of Intelligent Systems, Vol. 29 (Issue 1), pp. 1261-1274. https://doi.org/10.1515/jisys-2018-0372
+
+3.	Taha, K. (2023). Semi-supervised and un-supervised clustering: A review and experimental evaluation. Information Systems, 102178.‏
+
+4.	Gulati, A., Qin, J., Chiu, C. C., Parmar, N., Zhang, Y., Yu, J., ... & Pang, R. (2020). Conformer: Convolution-augmented transformer for speech recognition. arXiv preprint arXiv:2005.08100.‏
+
+5.	Chan, W., Jaitly, N., Le, Q. V., & Vinyals, O. (2015). Listen, attend and spell. arXiv preprint  arXiv:1508.01211.‏
+
+6.	Park, D. S., Chan, W., Zhang, Y., Chiu, C. C., Zoph, B., Cubuk, E. D., & Le, Q. V. (2019). Specaugment: A simple data augmentation method for automatic speech recognition. arXiv preprint arXiv:1904.08779.‏
+
 
 
