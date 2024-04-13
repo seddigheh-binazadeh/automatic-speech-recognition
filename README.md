@@ -12,7 +12,11 @@ The conformer model is a type of neural network architecture that has been used 
 
 William Chan et al., [5] introduced a sequence-to-sequence model based on the Transformer architecture for end-to-end speech recognition tasks. The model incorporates self-attention mechanisms to capture long-range dependencies in the input sequence, making it well-suited for speech recognition tasks.
 
-In this work, we utilize the LJSpeech dataset to develop an automatic speech recognition model aimed at converting speech into text. The LJSpeech dataset consists of approximately 13,100 high-quality speech audio files, each accompanied by a corresponding text transcription.
+
+# DataSet
+In this work, we utilize the LJSpeech dataset to develop an automatic speech recognition model aimed at converting speech into text. The LJSpeech dataset consists of approximately 13,100 high-quality speech audio files, each accompanied by a corresponding text transcription. in the fallowing link the dataset is available for downloading.
+
+[LJSpeech DataSet](https://keithito.com/LJ-Speech-Dataset/)
 
 # Preprocessing
 
