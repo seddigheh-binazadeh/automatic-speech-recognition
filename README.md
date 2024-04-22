@@ -33,7 +33,7 @@ Our model has two important parts. First, there is the feature extractor part, f
 To ensure precision in our model, we incorporate positional encoding as well as src_mask and trg_mask into the transformer model.
 For Regularization we apply the dropout = 0.1 in transformer layer.
 Our model has 127 M parameters. 
-We benefit from the example of using transformer layer for sequence-to-sequence tasks in the [PyTorch tutorial](https://pytorch.org/tutorials/beginner/transformer_tutorial.html) [7].
+(We benefit from the example of using transformer layer for sequence-to-sequence tasks in the [PyTorch tutorial](https://pytorch.org/tutorials/beginner/transformer_tutorial.html) [7].)
 
 | Maxpool2d       | Embedding layer                    | Transformer Layer     |
 | :-------------: | :---------------------------------:|:---------------------:|
