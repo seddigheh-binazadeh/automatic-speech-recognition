@@ -33,6 +33,7 @@ Our model has two important parts. First, there is the feature extractor part, f
 To ensure precision in our model, we incorporate positional encoding as well as src_mask and trg_mask into the transformer model.
 For Regularization we apply the dropout = 0.1 in transformer layer.
 Our model has 127 M parameters. 
+We benefit from the example of using transformer layer for sequence-to-sequence tasks in the [PyTorch tutorial](https://pytorch.org/tutorials/beginner/transformer_tutorial.html) [7].
 
 | Maxpool2d       | Embedding layer                    | Transformer Layer     |
 | :-------------: | :---------------------------------:|:---------------------:|
@@ -61,7 +62,8 @@ Figure below represent the loss curves in training progress:
 
 5.	Chan, W., Jaitly, N., Le, Q. V., & Vinyals, O. (2015). Listen, attend and spell. arXiv preprint  arXiv:1508.01211.‏
 
-6.	Park, D. S., Chan, W., Zhang, Y., Chiu, C. C., Zoph, B., Cubuk, E. D., & Le, Q. V. (2019). Specaugment: A simple data augmentation method for automatic speech recognition. arXiv preprint arXiv:1904.08779.‏
-
+6.	Park, D. S., Chan, W., Zhang, Y., Chiu, C. C., Zoph, B., Cubuk, E. D., & Le, Q. V. (2019). Specaugment: A simple data augmentation method for automatic speech recognition. arXiv preprint arXiv:1904.08779.
+‏
+7. https://pytorch.org/tutorials/beginner/transformer_tutorial.html
 
 
