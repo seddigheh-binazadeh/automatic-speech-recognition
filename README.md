@@ -21,7 +21,7 @@ In this work, we utilize the LJSpeech dataset to develop an automatic speech rec
 # Preprocessing
 
 In this project we use Mel-spectrogram representation instead of raw audio.  Next, each clip was transformed into its Mel-spectrogram representation. A spectrogram is a visual depiction of a signal’s frequency composition over time. The Mel scale provides a linear scale for the human auditory system, and is related to Hertz by the following formula, where m represents Mels and f represents Hertz:
- $m=2595 〖log〗_10  (1+f/700)$
+ $m=2595  log  (1+f/700)$
 The processed clips were converted into Mel spectrogram representations, which visually illustrate a signal's frequency makeup over time using the Mel scale, a linear scale for human hearing. The Mel spectrogram helps our models understand sound as humans do. This is achieved by passing the raw audio through filter banks to obtain the Mel spectrogram, resulting in a shape of 128 x input dimension for each sample, indicating 128 filter banks used and input dimension time steps per clip. Then we applied specAugment (A Simple Data Augmentation Method for Automatic Speech Recognition [6]) that is available in pytorch and consists of warping the features, masking blocks of frequency channels, and masking blocks of time steps. 
 Figures 1 and 2 show a raw audio clip and its corresponding Mel frequency representation after augmentation. Our models learn features from this representation, and their architectures are discussed next.
 
